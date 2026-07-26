@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>وردبان (WorDBan) — افزونه بررسی سلامت وردپرس | راست چین</title>
-<meta name="description" content="وردبان افزونه‌ای تخصصی برای بررسی، تحلیل و بهبود سلامت سایت‌های وردپرسی با بیش از ۷۰ بررسی تخصصی در ۵ دسته اصلی">
+<meta name="description" content="وردبان افزونه‌ای تخصصی برای بررسی، تحلیل و بهبود سلامت سایت‌های وردپرسی با هوش مصنوعی، پاک‌سازی پیشرفته و امنیت چندلایه">
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet" type="text/css" />
 <style>
 /* =========================================================
@@ -52,7 +52,7 @@ ul{list-style:none;}
   transform:rotate(6deg);
 }
 .brand-logo svg{width:24px;height:24px;}
-.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-links{display:flex;align-items:center;gap:24px;}
 .nav-links a{font-size:15px;font-weight:800;color:var(--ink-2);transition:color .15s;}
 .nav-links a:hover{color:#15803d;}
 .nav-cta{display:flex;align-items:center;gap:10px;}
@@ -86,11 +86,60 @@ ul{list-style:none;}
 /* ===== SECTION BASE ===== */
 .section{padding:88px 0;position:relative;}
 .section.soft{background:#f7fefb;}
-.sec-head{text-align:center;max-width:720px;margin:0 auto 56px;position:relative;z-index:1;}
+.sec-head{text-align:center;max-width:820px;margin:0 auto 56px;position:relative;z-index:1;}
 .sec-head h2{font-size:clamp(28px,4.4vw,42px);font-weight:900;letter-spacing:-.5px;line-height:1.35;margin:14px 0 12px;color:var(--ink);}
 .sec-head p{color:var(--muted);font-size:17px;font-weight:500;}
 
-/* ===== CATEGORIES ===== */
+/* ===== AI AGENT SECTION ===== */
+.ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.ai-features{list-style:none;}
+.ai-features li{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;font-size:15.5px;color:var(--ink-2);line-height:1.8;}
+.ai-features li svg{width:24px;height:24px;color:#16a34a;flex-shrink:0;margin-top:3px;}
+.provider-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+.provider-tag{background:#fff;border:1.5px solid var(--line);color:var(--ink-2);padding:8px 16px;border-radius:12px;font-size:13.5px;font-weight:700;display:flex;align-items:center;gap:6px;transition:all .2s;}
+.provider-tag:hover{border-color:#16a34a;color:#15803d;background:#f0fdf4;}
+.chat-mockup{background:#fff;border:2px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow-lg);position:relative;}
+.chat-mockup::before{content:"دستیار هوشمند وردبان";position:absolute;top:-12px;right:24px;background:#15803d;color:#fff;padding:4px 16px;border-radius:100px;font-size:13px;font-weight:800;}
+.chat-msg{padding:14px 18px;border-radius:18px;margin-bottom:16px;font-size:14.5px;line-height:1.8;max-width:90%;position:relative;}
+.chat-msg.ai{background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;border-top-right-radius:4px;}
+.chat-msg.user{background:#15803d;color:#fff;margin-right:auto;border-top-left-radius:4px;}
+.chat-input{display:flex;gap:10px;margin-top:20px;padding-top:16px;border-top:1.5px solid var(--line);}
+.chat-input input{flex:1;border:1.5px solid var(--line);border-radius:12px;padding:12px 16px;font-family:inherit;font-size:14px;outline:none;}
+.chat-input input:focus{border-color:#16a34a;}
+.chat-input button{background:#15803d;color:#fff;border:none;border-radius:12px;padding:0 20px;cursor:pointer;font-weight:800;}
+
+/* ===== CLEANUP GRID ===== */
+.cleanup-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.cleanup-card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:24px 20px;transition:transform .2s,box-shadow .2s;}
+.cleanup-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#86efac;}
+.cleanup-card .icon{width:48px;height:48px;border-radius:14px;background:#f0fdf4;color:#15803d;display:grid;place-items:center;margin-bottom:16px;}
+.cleanup-card .icon svg{width:24px;height:24px;}
+.cleanup-card h4{font-size:16px;font-weight:900;color:var(--ink);margin-bottom:8px;}
+.cleanup-card p{font-size:13.5px;color:var(--muted);line-height:1.8;}
+
+/* ===== SECURITY UPGRADES ===== */
+.sec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.sec-card{background:#fff;border:2px solid var(--line);border-radius:20px;padding:32px 28px;display:flex;gap:20px;transition:transform .2s,box-shadow .2s;}
+.sec-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#86efac;}
+.sec-card .ico{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;color:#fff;flex-shrink:0;}
+.sec-card .ico svg{width:32px;height:32px;}
+.sec-card:nth-child(1) .ico{background:linear-gradient(135deg,#3b82f6,#2563eb);}
+.sec-card:nth-child(2) .ico{background:linear-gradient(135deg,#8b5cf6,#7c3aed);}
+.sec-card:nth-child(3) .ico{background:linear-gradient(135deg,#f59e0b,#d97706);}
+.sec-card:nth-child(4) .ico{background:linear-gradient(135deg,#14b8a6,#22c55e);}
+.sec-card h3{font-size:19px;font-weight:900;color:var(--ink);margin-bottom:10px;}
+.sec-card p{font-size:14.5px;color:var(--muted);line-height:1.85;}
+
+/* ===== INFO CARDS (UPDATED) ===== */
+.info-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:20px;position:relative;z-index:1;}
+.info-card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:24px;transition:transform .2s,box-shadow .2s;text-align:right;}
+.info-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#86efac;}
+.info-card .info-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.info-card .info-icon{font-size:28px;}
+.info-card h4{font-size:16px;font-weight:900;color:var(--ink);}
+.info-desc{font-size:13.5px;color:var(--muted);line-height:1.85;}
+
+/* ===== CATEGORIES & OTHERS (Preserved) ===== */
 .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative;z-index:1;}
 .cat{background:#fff;border:2px solid var(--line);border-radius:20px;padding:28px 24px;position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s,border-color .22s;}
 .cat:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#86efac;}
@@ -110,7 +159,6 @@ ul{list-style:none;}
 .cat:nth-child(6) .ceiling{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.3);color:#fff;}
 .cat:nth-child(6) .ico{background:rgba(255,255,255,.22);}
 
-/* ===== 10 TABS ===== */
 .tabs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative;z-index:1;}
 .tcard{background:#fff;border:2px solid var(--line);border-radius:16px;padding:22px 18px;text-align:center;transition:transform .2s,box-shadow .2s,border-color .2s;}
 .tcard:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#86efac;}
@@ -118,7 +166,6 @@ ul{list-style:none;}
 .tcard h3{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:5px;}
 .tcard p{color:var(--muted);font-size:13px;line-height:1.7;}
 
-/* ===== SCORING ===== */
 .score-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center;position:relative;z-index:1;}
 .score-mock{background:#fff;border:2.5px solid var(--line);border-radius:24px;padding:34px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden;}
 .big-ring{width:180px;height:180px;margin:0 auto 18px;position:relative;z-index:1;}
@@ -138,7 +185,6 @@ ul{list-style:none;}
 .ceiling-bar .track{height:12px;border-radius:100px;background:#dcfce7;overflow:hidden;}
 .ceiling-bar .fill{height:100%;border-radius:100px;}
 
-/* ===== KEY FEATURES ===== */
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1;}
 .feat{background:#fff;border:2px solid var(--line);border-radius:18px;padding:26px 22px;transition:transform .22s,box-shadow .22s,border-color .22s;}
 .feat:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#86efac;}
@@ -153,7 +199,6 @@ ul{list-style:none;}
 .feat:nth-child(5) .ico{background:linear-gradient(135deg,#ef4444,#dc2626);}
 .feat:nth-child(6) .ico{background:linear-gradient(135deg,#14b8a6,#22c55e);}
 
-/* ===== STATUS CHIPS ===== */
 .status-row{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;margin-top:36px;position:relative;z-index:1;}
 .status-chip{display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border-radius:100px;font-weight:800;font-size:14.5px;border:1.5px solid;}
 .status-chip i{width:10px;height:10px;border-radius:50%;}
@@ -162,7 +207,6 @@ ul{list-style:none;}
 .s-critical{background:#fee2e2;color:#991b1b;border-color:#fca5a5;}.s-critical i{background:#ef4444;}
 .s-info{background:#dbeafe;color:#1e40af;border-color:#93c5fd;}.s-info i{background:#3b82f6;}
 
-/* ===== PRIVACY BANNER ===== */
 .privacy{background:linear-gradient(135deg,#15803d 0%,#0d9488 100%);border-radius:26px;padding:46px 42px;color:#fff;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;}
 .privacy .ico{width:76px;height:76px;border-radius:22px;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.35);display:grid;place-items:center;flex-shrink:0;position:relative;z-index:1;}
 .privacy .ico svg{width:38px;height:38px;color:#fff;}
@@ -170,7 +214,6 @@ ul{list-style:none;}
 .privacy p{font-size:16px;opacity:.95;line-height:1.85;position:relative;z-index:1;}
 .privacy .tag{background:rgba(0,0,0,.22);border:2px solid rgba(255,255,255,.35);padding:11px 20px;border-radius:100px;font-weight:800;font-size:14.5px;white-space:nowrap;position:relative;z-index:1;}
 
-/* ===== NEW: CHECKS ACCORDION ===== */
 .checks-accordion{max-width:900px;margin:0 auto;position:relative;z-index:1;}
 .check-item{background:#fff;border:2px solid var(--line);border-radius:18px;margin-bottom:14px;overflow:hidden;box-shadow:var(--shadow-sm);}
 .check-header{width:100%;text-align:right;font-family:inherit;font-size:17px;font-weight:900;color:var(--ink);background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
@@ -182,15 +225,6 @@ ul{list-style:none;}
 .check-list-item{font-size:14px;color:var(--ink-2);line-height:1.7;padding:10px;background:#f7fefb;border-radius:10px;border-right:3px solid var(--g-400);}
 .check-list-item strong{color:#15803d;display:block;margin-bottom:3px;font-size:14.5px;}
 
-/* ===== NEW: WP INFO GRID ===== */
-.info-grid{display:grid;grid-template-columns:repeat(4, 1fr);gap:18px;position:relative;z-index:1;}
-.info-card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:24px 20px;text-align:center;transition:transform .2s,box-shadow .2s;}
-.info-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#86efac;}
-.info-card .info-icon{font-size:32px;margin-bottom:12px;display:block;}
-.info-card h4{font-size:16px;font-weight:900;color:var(--ink);margin-bottom:10px;}
-.info-card .count-badge{display:inline-block;background:#dcfce7;color:#15803d;padding:5px 14px;border-radius:100px;font-size:13px;font-weight:800;border:1.5px solid #86efac;}
-
-/* ===== FAQ ===== */
 .faq{max-width:820px;margin:0 auto;position:relative;z-index:1;}
 .faq-item{background:#fff;border:2px solid var(--line);border-radius:18px;margin-bottom:14px;overflow:hidden;box-shadow:var(--shadow-sm);}
 .faq-q{width:100%;text-align:right;font-family:inherit;font-size:16px;font-weight:900;color:var(--ink);background:none;border:none;cursor:pointer;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
@@ -200,7 +234,6 @@ ul{list-style:none;}
 .faq-a p{padding:0 24px 20px;color:var(--muted);font-size:14.5px;line-height:1.9;}
 .faq-item.open .faq-a{max-height:280px;}
 
-/* ===== CTA BAND ===== */
 .cta-band{background:radial-gradient(440px 280px at 18% 18%,rgba(255,255,255,.15),transparent 60%),linear-gradient(135deg,#15803d 0%,#0d9488 100%);border-radius:28px;padding:60px 40px;text-align:center;color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;}
 .cta-band .flogo{display:inline-flex;align-items:center;gap:14px;margin-bottom:20px;position:relative;z-index:1;}
 .cta-band .flogo .badge{width:56px;height:56px;border-radius:17px;background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.4);display:grid;place-items:center;}
@@ -209,7 +242,6 @@ ul{list-style:none;}
 .cta-band h2{font-size:28px;font-weight:900;margin-bottom:12px;position:relative;z-index:1;}
 .cta-band .ver{margin-top:22px;font-size:14px;font-weight:800;opacity:.85;position:relative;z-index:1;}
 
-/* ===== FOOTER ===== */
 .footer{background:#06281b;color:#bbd8c9;padding:64px 0 32px;position:relative;}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr;gap:38px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
 .footer .brand{color:#fff;margin-bottom:18px;font-size:24px;}
@@ -225,9 +257,9 @@ ul{list-style:none;}
 /* ===== RESPONSIVE ===== */
 @media (max-width:1080px){
   .tabs-grid{grid-template-columns:repeat(3,1fr);}
-  .hero-grid{grid-template-columns:1fr;gap:50px;}
-  .score-wrap{grid-template-columns:1fr;gap:36px;}
-  .info-grid{grid-template-columns:repeat(3, 1fr);}
+  .hero-grid,.ai-grid,.score-wrap{grid-template-columns:1fr;gap:50px;}
+  .cleanup-grid{grid-template-columns:repeat(2,1fr);}
+  .info-grid{grid-template-columns:repeat(2, 1fr);}
   .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
 }
 @media (max-width:820px){
@@ -238,20 +270,18 @@ ul{list-style:none;}
     position:absolute;top:100%;right:0;left:0;background:#fff;
     padding:24px;border-bottom:2px solid var(--line);box-shadow:var(--shadow);
   }
-  .cat-grid,.feat-grid{grid-template-columns:1fr 1fr;}
+  .cat-grid,.feat-grid,.sec-grid{grid-template-columns:1fr 1fr;}
   .check-list{grid-template-columns:1fr;}
   .privacy{grid-template-columns:1fr;text-align:center;}
   .privacy .tag{justify-self:center;}
   .hero-stats{grid-template-columns:1fr 1fr;}
-  .info-grid{grid-template-columns:repeat(2, 1fr);}
 }
 @media (max-width:540px){
   .section{padding:60px 0;}
-  .cat-grid,.tabs-grid,.feat-grid{grid-template-columns:1fr;}
+  .cat-grid,.tabs-grid,.feat-grid,.cleanup-grid,.sec-grid,.info-grid{grid-template-columns:1fr;}
   .wrap{padding:0 18px;}
   .footer-top{grid-template-columns:1fr;}
   .cta-band,.privacy{padding:44px 24px;}
-  .info-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -269,9 +299,9 @@ ul{list-style:none;}
             <span>وردبان</span>
         </a>
         <div class="nav-links">
-            <a href="#cats">دسته‌ها</a>
-            <a href="#sections">بخش‌ها</a>
-            <a href="#score">امتیازدهی</a>
+            <a href="#ai">هوش مصنوعی</a>
+            <a href="#cleanup">پاک‌سازی</a>
+            <a href="#security">امنیت</a>
             <a href="#checks">بررسی‌ها</a>
             <a href="#faq">سوالات</a>
         </div>
@@ -287,27 +317,79 @@ ul{list-style:none;}
 <header class="hero">
     <div class="wrap hero-grid">
         <div>
-            <span class="pill"><span class="dot"></span>افزونه تخصصی بررسی سلامت وردپرس</span>
-            <h1>سلامت سایت وردپرسی را با <span class="grad">وردبان</span> تضمین کنید</h1>
-            <p class="hero-sub">افزونه‌ای حرفه‌ای برای بررسی، تحلیل و بهبود سلامت سایت‌های وردپرسی. با بیش از ۷۰ بررسی تخصصی در ۵ دسته، نمای شفافی از وضعیت فنی سایت شما ارائه می‌دهد.</p>
+            <span class="pill"><span class="dot"></span>نسخه جدید با هوش مصنوعی و پاک‌سازی پیشرفته</span>
+            <h1>تضمین سلامت سایت وردپرسی با <span class="grad">وردبان</span></h1>
+            <p class="hero-sub">افزونه‌ای حرفه‌ای برای بررسی، تحلیل و بهبود سلامت سایت‌های وردپرسی. مجهز به دستیار هوشمند، پاک‌سازی ۸ گانه خودکار و امنیت چندلایه.</p>
             <div class="hero-stats">
                 <div class="hstat"><div class="n">۷۷+</div><div class="l">بررسی تخصصی</div></div>
-                <div class="hstat"><div class="n">۵</div><div class="l">دسته اصلی</div></div>
-                <div class="hstat"><div class="n">۱۰</div><div class="l">بخش کامل</div></div>
-                <div class="hstat"><div class="n">۱۰۰٪</div><div class="l">فارسی و RTL</div></div>
+                <div class="hstat"><div class="n">۸</div><div class="l">ابزار پاک‌سازی</div></div>
+                <div class="hstat"><div class="n">AI</div><div class="l">دستیار هوشمند</div></div>
+                <div class="hstat"><div class="n">۱۰۰٪</div><div class="l">بهینه و سریع</div></div>
             </div>
         </div>
         <div class="hero-visual">
             <div class="hero-card">
-                <div class="bar"><i class="dr"></i><i class="dy"></i><i class="dg"></i><span class="ttl">پیشخوان وردبان</span></div>
+                <div class="bar"><i class="dr"></i><i class="dy"></i><i class="dg"></i><span class="ttl">پیشخوان هوشمند وردبان</span></div>
                 <img src="https://uploadkon.ir/uploads/dfa323_26تصویر-اصلی-افزونه-پیشخوان.png" alt="پیشخوان افزونه وردبان">
             </div>
         </div>
     </div>
 </header>
 
-<!-- ===== 5 CATEGORIES ===== -->
-<section class="section" id="cats">
+<!-- ===== NEW: AI AGENT SECTION ===== -->
+<section class="section" id="ai">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="pill"><span class="dot"></span>ارتقای انقلابی</span>
+            <h2>دستیار <span class="grad">هوش مصنوعی</span> اختصاصی سایت شما</h2>
+            <p>پس از هر اسکن، ایجنت هوشمند به تمام مشکلات و اطلاعات سایت دسترسی پیدا می‌کند تا راهکارهایی کاملاً شخصی‌سازی‌شده ارائه دهد.</p>
+        </div>
+        <div class="ai-grid">
+            <div>
+                <ul class="ai-features">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/></svg>
+                        <span><strong>دسترسی کامل به داده‌های اسکن:</strong> هوش مصنوعی تمام ۷۷ بررسی و اطلاعات جامع وردپرس شما را تحلیل می‌کند تا پاسخ‌هایی دقیق و مختص سایت شما بدهد.</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <span><strong>پشتیبانی از برترین مدل‌ها:</strong> امکان اتصال به هر مدل زبانی بزرگ (LLM) از طریق API Key شخصی شما.</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        <span><strong>مدیریت حرفه‌ای توکن‌ها:</strong> کنترل کامل روی حداکثر توکن‌های پاسخ (Max Tokens) برای بهینه‌سازی هزینه‌ها و دریافت پاسخ‌های دقیق‌تر.</span>
+                    </li>
+                </ul>
+                <div class="provider-tags">
+                    <span class="provider-tag">OpenAI</span>
+                    <span class="provider-tag">OpenRouter</span>
+                    <span class="provider-tag">DeepSeek</span>
+                    <span class="provider-tag">Google Gemini</span>
+                    <span class="provider-tag">Anthropic</span>
+                    <span class="provider-tag">Groq</span>
+                </div>
+            </div>
+            <div class="chat-mockup">
+                <div class="chat-msg ai">
+                    سلام! من دستیار هوشمند وردبان هستم. اسکن اخیر سایت شما ۳ مشکل بحرانی در بخش پایگاه داده و ۲ هشدار امنیتی نشان داد. آیا می‌خواهید راهکار رفع خودکار گزینه‌های حجیم (Bloated Options) را توضیح دهم؟
+                </div>
+                <div class="chat-msg user">
+                    بله، لطفاً راهنمایی کن چطور بدون آسیب به سایت این گزینه‌ها را پاک‌سازی کنم؟
+                </div>
+                <div class="chat-msg ai">
+                    حتماً. ابتدا از پایگاه داده خود یک نسخه پشتیبان (Backup) کامل بگیرید. سپس به بخش «پاک‌سازی» > «گزینه‌های حجیم» بروید. وردبان به‌صورت خودکار موارد بزرگتر از ۱ مگابایت را که متعلق به هسته یا افزونه‌های فعال نیستند، شناسایی و برای حذف ایمن لیست می‌کند...
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="سوال خود را از دستیار هوشمند بپرسید..." disabled>
+                    <button>ارسال</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="section soft" id="cats">
     <div class="wrap">
         <div class="sec-head">
             <span class="pill"><span class="dot"></span>پوشش کامل</span>
@@ -317,7 +399,7 @@ ul{list-style:none;}
         <div class="cat-grid">
             <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div><div class="count">۲۵</div><h3>امنیت</h3><p>بررسی کامل امنیت شامل نسخه‌ها، هدرها، کلیدها و فایل‌های حساس.</p><span class="ceiling">سقف امتیاز: ۴۰</span></div>
             <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="count">۱۷</div><h3>عملکرد</h3><p>ارزیابی سرعت و کارایی؛ PHP، کش، فشرده‌سازی و پروتکل‌های مدرن.</p><span class="ceiling">سقف امتیاز: ۳۵</span></div>
-            <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="count">۱۳</div><h3>پایگاه داده</h3><p>سلامت و بهینگی دیتابیس؛ سربار، گزینه‌های حجیم و داده‌های یتیم.</p><span class="ceiling">سقف امتیاز: ۳۰</span></div>
+            <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><div class="count">۱۳</div><h3>پایگاه داده</h3><p>سلامت و امنیت دیتابیس؛ جداول حجیم و داده‌های یتیم.</p><span class="ceiling">سقف امتیاز: ۳۰</span></div>
             <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6"/><path d="M4.22 4.22l4.24 4.24m7.07 7.07l4.24 4.24"/><path d="M1 12h6m10 0h6"/></svg></div><div class="count">۹</div><h3>تنظیمات</h3><p>بررسی تنظیمات وردپرس، منطقه زمانی، REST API و افزونه‌های غیرفعال.</p><span class="ceiling">سقف امتیاز: ۲۰</span></div>
             <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="count">۱۳</div><h3>محتوا و سیستم</h3><p>کیفیت محتوا، لینک‌های خراب، رسانه‌های بی‌استفاده و وضعیت کرون.</p><span class="ceiling">سقف امتیاز: ۲۰</span></div>
             <div class="cat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div class="count">۷۷</div><h3>مجموع بررسی‌ها</h3><p>بیش از ۷۷ بررسی تخصصی که در هر اسکن به‌صورت کامل و تکه‌تکه اجرا می‌شوند.</p><span class="ceiling">اسکن سریع و بهینه</span></div>
@@ -325,8 +407,102 @@ ul{list-style:none;}
     </div>
 </section>
 
+<!-- ===== NEW: ADVANCED CLEANUP ===== -->
+<section class="section" id="cleanup">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="pill"><span class="dot"></span>بهینه‌سازی خودکار</span>
+            <h2>پاک‌سازی هوشمند <span class="grad">۸ گانه</span> پایگاه داده</h2>
+            <p>شناسایی و حذف خودکار موارد غیرضروری برای افزایش سرعت و آزادسازی فضای سرور</p>
+        </div>
+        <div class="cleanup-grid">
+            <div class="cleanup-card">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <h4>بازبینی نوشته‌ها</h4>
+                <p>حذف بازبینی‌های قدیمی نوشته‌ها که دیگر مورد نیاز نیستند و حجم دیتابیس را افزایش می‌دهند.</p>
+            </div>
+            <div class="cleanup-card">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                <h4>داده‌های موقت منقضی</h4>
+                <p>پاک‌سازی داده‌های موقت کش (Transients) که منقضی شده‌اند و فضایی بی‌دلیل اشغال کرده‌اند.</p>
+            </div>
+            <div class="cleanup-card">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+                <h4>پیش‌نویس‌های خودکار</h4>
+                <p>حذف نوشته‌های پیش‌نویس که توسط وردپرس ذخیره شده‌اند اما هرگز منتشر نشده‌اند.</p>
+            </div>
+            <div class="cleanup-card">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+                <h4>زباله‌دان</h4>
+                <p>حذف دائمی موارد موجود در زباله‌دان (نوشته‌ها، برگه‌ها، دیدگاه‌ها) برای آزادسازی فضا.</p>
+            </div>
+            <div class="cleanup-card">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                <h4>دیدگاه‌های هرزنامه</h4>
+                <p>پاک‌سازی دیدگاه‌هایی که به عنوان هرزنامه (Spam) علامت خورده و فضای پایگاه داده را اشغال می‌کنند.</p>
+            </div>
+            <div class="cleanup-card">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+                <h4>گزینه‌های حجیم</h4>
+                <p>شناسایی و حذف ایمن ورودی‌های wp_options بزرگتر از ۱ مگابایت که غیرضروری هستند.</p>
+            </div>
+            <div class="cleanup-card">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+                <h4>رسانه‌های استفاده‌نشده</h4>
+                <p>شناسایی تصاویر و فایل‌های رسانه‌ای که در هیچ نوشته یا برگه‌ای استفاده نشده‌اند.</p>
+            </div>
+            <div class="cleanup-card">
+                <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <h4>کاربران غیرفعال</h4>
+                <p>حذف کاربرانی که بیش از ۶ ماه وارد سایت نشده‌اند (مدیران مستثنی هستند و نوشته‌ها به ادمین اصلی منتقل می‌شود).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== NEW: SECURITY & MANAGEMENT UPGRADES ===== -->
+<section class="section soft" id="security">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="pill"><span class="dot"></span>ارتقاهای امنیتی</span>
+            <h2>مدیریت و <span class="grad">امنیت پیشرفته</span> ورود</h2>
+            <p>ابزارهای جدید برای محافظت از پنل مدیریت در برابر دسترسی‌های غیرمجاز و ربات‌ها</p>
+        </div>
+        <div class="sec-grid">
+            <div class="sec-card">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+                <div>
+                    <h3>لینک ورود سفارشی ادمین</h3>
+                    <p>تغییر آدرس‌های پیش‌فرض wp-admin و wp-login.php به یک لینک کاستوم و شخصی. این کار دسترسی ربات‌ها و کاربران غیرمجاز را به شدت محدود می‌کند.</p>
+                </div>
+            </div>
+            <div class="sec-card">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+                <div>
+                    <h3>احراز هویت دو مرحله‌ای (TOTP)</h3>
+                    <p>دریافت کد یکبار مصرف ۶ رقمی از طریق Google Authenticator، Aegis یا Authy. پشتیبانی کامل از کیوآر کد و کلید مخفی برای ورود دستی و ایمن.</p>
+                </div>
+            </div>
+            <div class="sec-card">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+                <div>
+                    <h3>امنیت فرم ورود (Anti-Bot)</h3>
+                    <p>ادغام آسان با Google reCAPTCHA یا Cloudflare Turnstile برای نمایش یک چالش ساده و تشخیص قطعی کاربران واقعی از ربات‌های مخرب.</p>
+                </div>
+            </div>
+            <div class="sec-card">
+                <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+                <div>
+                    <h3>ثبت فعالیت ادمین‌ها</h3>
+                    <p>ثبت خودکار ورود و خروج مدیران سایت. محاسبه دقیق مدت زمان فعالیت هر کاربر بر اساس آخرین زمان ورود و خروج برای نظارت کامل.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ===== 10 SECTIONS ===== -->
-<section class="section soft" id="sections">
+<section class="section" id="sections">
     <div class="wrap">
         <div class="sec-head">
             <span class="pill"><span class="dot"></span>ساختار افزونه</span>
@@ -338,18 +514,18 @@ ul{list-style:none;}
             <div class="tcard"><div class="num">۲</div><h3>بررسی سلامت</h3><p>اجرای ۷۷+ بررسی</p></div>
             <div class="tcard"><div class="num">۳</div><h3>مشکلات سایت</h3><p>مدیریت چرخه حیات</p></div>
             <div class="tcard"><div class="num">۴</div><h3>پیشنهادها</h3><p>هوشمند با ریسک‌سنجی</p></div>
-            <div class="tcard"><div class="num">۵</div><h3>پاک‌سازی</h3><p>۱۰ ابزار بهینه‌سازی</p></div>
+            <div class="tcard"><div class="num">۵</div><h3>پاک‌سازی</h3><p>۸ ابزار بهینه‌سازی خودکار</p></div>
             <div class="tcard"><div class="num">۶</div><h3>افزونه‌ها</h3><p>تشخیص نال‌شده‌ها</p></div>
             <div class="tcard"><div class="num">۷</div><h3>اطلاعات وردپرس</h3><p>کارت‌های اطلاعاتی جامع</p></div>
             <div class="tcard"><div class="num">۸</div><h3>گزارش سلامت</h3><p>خروجی JSON/CSV</p></div>
-            <div class="tcard"><div class="num">۹</div><h3>راهنما</h3><p>مستندات کامل</p></div>
-            <div class="tcard"><div class="num">۱۰</div><h3>تنظیمات</h3><p>اعلان نوار ادمین</p></div>
+            <div class="tcard"><div class="num">۹</div><h3>اطلاعات وردپرس</h3><p>آنالیز کامل پیشخوان</p></div>
+            <div class="tcard"><div class="num">۱۰</div><h3>امینت پنل</h3><p>پاکسازی رخنه های امنیتی</p></div>
         </div>
     </div>
 </section>
 
 <!-- ===== SCORING ===== -->
-<section class="section" id="score">
+<section class="section soft" id="score">
     <div class="wrap">
         <div class="sec-head">
             <span class="pill"><span class="dot"></span>سیستم امتیازدهی هوشمند</span>
@@ -383,8 +559,8 @@ ul{list-style:none;}
     </div>
 </section>
 
-<!-- ===== NEW: 77 CHECKS DETAILS ===== -->
-<section class="section soft" id="checks">
+<!-- ===== CHECKS ACCORDION ===== -->
+<section class="section" id="checks">
     <div class="wrap">
         <div class="sec-head">
             <span class="pill"><span class="dot"></span>شفافیت کامل</span>
@@ -392,7 +568,6 @@ ul{list-style:none;}
             <p>هر بررسی یک کلاس PHP جداگانه است که از رابط HealthCheckInterface پیروی می‌کند. برای مشاهده جزئیات هر دسته، روی آن کلیک کنید.</p>
         </div>
         <div class="checks-accordion">
-            <!-- Security -->
             <div class="check-item open">
                 <button class="check-header">۱. بررسی‌های امنیتی (۲۵ مورد) <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="check-body">
@@ -425,7 +600,6 @@ ul{list-style:none;}
                     </div>
                 </div>
             </div>
-            <!-- Performance -->
             <div class="check-item">
                 <button class="check-header">۲. بررسی‌های عملکرد (۱۷ مورد) <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="check-body">
@@ -450,7 +624,6 @@ ul{list-style:none;}
                     </div>
                 </div>
             </div>
-            <!-- Database -->
             <div class="check-item">
                 <button class="check-header">۳. بررسی‌های پایگاه داده (۱۳ مورد) <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="check-body">
@@ -471,7 +644,6 @@ ul{list-style:none;}
                     </div>
                 </div>
             </div>
-            <!-- Settings -->
             <div class="check-item">
                 <button class="check-header">۴. بررسی‌های تنظیمات (۹ مورد) <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="check-body">
@@ -488,7 +660,6 @@ ul{list-style:none;}
                     </div>
                 </div>
             </div>
-            <!-- Content -->
             <div class="check-item">
                 <button class="check-header">۵. بررسی‌های محتوا و سیستم (۱۳ مورد) <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
                 <div class="check-body">
@@ -511,87 +682,76 @@ ul{list-style:none;}
     </div>
 </section>
 
-<!-- ===== NEW: WP INFO SUMMARY ===== -->
-<section class="section" id="wp-info">
+<!-- ===== UPDATED: WP INFO DETAILS ===== -->
+<section class="section soft" id="wp-info">
     <div class="wrap">
         <div class="sec-head">
             <span class="pill"><span class="dot"></span>دید جامع</span>
-            <h2>نمایش <span class="grad">اطلاعات وردپرس</span></h2>
-            <p>وردبان تمام اطلاعات حیاتی سایت شما را در ۱۱ دسته‌بندی منظم و به‌صورت لحظه‌ای نمایش می‌دهد.</p>
+            <h2>نمایش <span class="grad">اطلاعات جامع وردپرس</span></h2>
+            <p>وردبان تمام اطلاعات حیاتی سایت شما را در ۱۱ دسته‌بندی منظم و با جزئیات کامل نمایش می‌دهد.</p>
         </div>
         <div class="info-grid">
             <div class="info-card">
-                <span class="info-icon">🌐</span>
-                <h4>اطلاعات سایت</h4>
-                <span class="count-badge">۸ مورد</span>
+                <div class="info-header"><span class="info-icon">🌐</span><h4>اطلاعات سایت</h4></div>
+                <p class="info-desc">در این بخش اطلاعات کلی سایت مانند عنوان سایت، آدرس‌ها، نسخه وردپرس، زبان، منطقه زمانی، فرمت تاریخ و ساعت و همچنین وضعیت HTTPS نمایش داده می‌شود.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">⚙️</span>
-                <h4>اطلاعات سرور</h4>
-                <span class="count-badge">۷ مورد</span>
+                <div class="info-header"><span class="info-icon">⚙️</span><h4>اطلاعات سرور</h4></div>
+                <p class="info-desc">این بخش مشخصات محیط میزبانی سایت شامل نسخه PHP، پایگاه داده، نوع وب سرور، سیستم عامل، محدودیت‌های منابع سرور مانند حافظه، زمان اجرا، حجم آپلود، اندازه درخواست‌ها و سایر تنظیمات مرتبط را نمایش می‌دهد.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">🎨</span>
-                <h4>اطلاعات قالب</h4>
-                <span class="count-badge">۴ مورد</span>
+                <div class="info-header"><span class="info-icon">🎨</span><h4>اطلاعات قالب</h4></div>
+                <p class="info-desc">در این قسمت اطلاعات مربوط به قالب فعال سایت شامل نام قالب، نسخه، نویسنده و وضعیت استفاده از قالب فرزند قابل مشاهده است.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">🔌</span>
-                <h4>اطلاعات افزونه‌ها</h4>
-                <span class="count-badge">۵ مورد</span>
+                <div class="info-header"><span class="info-icon">🔌</span><h4>اطلاعات افزونه‌ها</h4></div>
+                <p class="info-desc">این بخش نمایی کامل از وضعیت افزونه‌ها شامل تعداد افزونه‌های نصب شده، فعال و غیرفعال، بروزرسانی‌های موجود، تعداد قالب‌های نصب شده و فهرست افزونه‌های فعال را ارائه می‌دهد.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">🧩</span>
-                <h4>هسته وردپرس</h4>
-                <span class="count-badge">۶ مورد</span>
+                <div class="info-header"><span class="info-icon">🧩</span><h4>هسته وردپرس</h4></div>
+                <p class="info-desc">در این بخش تنظیمات اصلی هسته وردپرس مانند وضعیت چندسایتی، حالت اشکال زدایی، Cron، REST API، XML-RPC و وضعیت ثبت نام کاربران نمایش داده می‌شود.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">👥</span>
-                <h4>اطلاعات کاربران</h4>
-                <span class="count-badge">۴ مورد</span>
+                <div class="info-header"><span class="info-icon">👥</span><h4>اطلاعات کاربران</h4></div>
+                <p class="info-desc">این قسمت اطلاعات آماری کاربران سایت شامل تعداد کاربران، نقش‌های کاربری و آخرین کاربر ثبت شده را نمایش می‌دهد.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">📝</span>
-                <h4>اطلاعات محتوا</h4>
-                <span class="count-badge">۸ مورد</span>
+                <div class="info-header"><span class="info-icon">📝</span><h4>اطلاعات محتوا</h4></div>
+                <p class="info-desc">در این بخش آمار محتوای سایت مانند تعداد نوشته‌ها، برگه‌ها، دسته‌بندی‌ها، برچسب‌ها، فایل‌های رسانه‌ای و وضعیت دیدگاه‌ها قابل مشاهده است.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">🗄</span>
-                <h4>اطلاعات پایگاه داده</h4>
-                <span class="count-badge">۵ مورد</span>
+                <div class="info-header"><span class="info-icon">🗄</span><h4>اطلاعات پایگاه داده</h4></div>
+                <p class="info-desc">این بخش اطلاعات مربوط به پایگاه داده شامل حجم دیتابیس، تعداد جدول‌ها، پیشوند جداول و وضعیت تنظیمات مهم پایگاه داده را نمایش می‌دهد.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">📁</span>
-                <h4>اطلاعات فایل‌ها</h4>
-                <span class="count-badge">۵ مورد</span>
+                <div class="info-header"><span class="info-icon">📁</span><h4>اطلاعات فایل‌ها</h4></div>
+                <p class="info-desc">در این قسمت اطلاعات مربوط به فضای ذخیره‌سازی سایت شامل حجم پوشه‌های اصلی وردپرس، فایل‌های بارگذاری شده، افزونه‌ها، قالب‌ها و میزان فضای آزاد سرور نمایش داده می‌شود.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">🛒</span>
-                <h4>ووکامرس</h4>
-                <span class="count-badge">۴ مورد</span>
+                <div class="info-header"><span class="info-icon">🛒</span><h4>ووکامرس</h4></div>
+                <p class="info-desc">در این بخش اطلاعات مربوط به فروشگاه ووکامرس شامل وضعیت افزونه، نسخه، تعداد محصولات و سفارش‌ها قابل مشاهده است.</p>
             </div>
             <div class="info-card">
-                <span class="info-icon">🔐</span>
-                <h4>امنیت پایه</h4>
-                <span class="count-badge">۴ مورد</span>
+                <div class="info-header"><span class="info-icon">🔐</span><h4>امنیت پایه</h4></div>
+                <p class="info-desc">این قسمت وضعیت مهم‌ترین تنظیمات امنیتی سایت مانند فعال بودن SSL، وجود فایل پیکربندی وردپرس، تعداد مدیران سایت و بررسی وجود یا عدم وجود نام کاربری پیشفرض را نمایش می‌دهد.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ===== STATUS / FEATURES ===== -->
-<section class="section soft" id="features">
+<section class="section" id="features">
     <div class="wrap">
         <div class="sec-head">
             <span class="pill"><span class="dot"></span>قابلیت‌های کلیدی</span>
-            <h2>ابزارهای <span class="grad"> حرفه‌ای</span>برای سلامت </h2>
+            <h2>ابزارهای <span class="grad">حرفه‌ای</span> برای سلامت پایدار</h2>
         </div>
         <div class="feat-grid">
             <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>رفع خودکار</h3><p>برخی مشکلات با یک کلیک به‌صورت خودکار رفع می‌شوند.</p></div>
             <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h3>اسکن تکه‌تکه</h3><p>جلوگیری از تایم‌اوت در سایت‌های بزرگ.</p></div>
             <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div><h3>خروجی گزارش</h3><p>JSON برای توسعه‌دهندگان و CSV برای اکسل.</p></div>
             <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>شناسایی افزونه نال</h3><p>افزونه‌های نال‌شده با هشدار ویژه.</p></div>
-            <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></div><h3>چرخه حیات مشکلات</h3><p>باز، در حال بررسی، حل شده و نادیده گرفته شده.</p></div>
+            <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></div><h3>چرخه حیات مشکلات</h3><p>مانیتورینگ هوشمند با ایجنت هوش مصنوعی برای بهبود عملکرد سایت</p></div>
             <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><h3>اعلان نوار ادمین</h3><p>نمایش امتیاز سلامت در نوار ابزار وردپرس.</p></div>
         </div>
         <div class="status-row">
@@ -666,7 +826,7 @@ ul{list-style:none;}
                 <span class="name">وردبان</span>
             </div>
             <h2>سلامت سایت خود را جدی بگیرید</h2>
-            <div class="ver">وردبان (WorDBan) — نسخه ۱.۰.۰</div>
+            <div class="ver">نسخه ۱.۰.۰</div>
         </div>
     </div>
 </section>
@@ -685,7 +845,7 @@ ul{list-style:none;}
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© ۱۴۰۵ افزونه وردبان (WordBan)</span>
+            <span>تیم پشتیبانی برای سوالات شما فعال است.</span>
             <span class="rastchin">
                 عرضه انحصاری در راست چین
                 <img src="https://kar.iranestekhdam.ir/storage/avatars/k.yazdaninia@gmail.com/1692530904_logowithtext-1024.png" alt="راست چین">
@@ -709,7 +869,6 @@ ul{list-style:none;}
         q.addEventListener('click',function(){
             var item=q.closest('.faq-item, .check-item');
             var was=item.classList.contains('open');
-            // Close siblings in the same parent container
             var siblings = item.parentElement.children;
             for(var i=0; i<siblings.length; i++){
                 siblings[i].classList.remove('open');
