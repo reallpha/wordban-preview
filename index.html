@@ -108,6 +108,11 @@ ul{list-style:none;}
 .chat-input input:focus{border-color:#16a34a;}
 .chat-input button{background:#15803d;color:#fff;border:none;border-radius:12px;padding:0 20px;cursor:pointer;font-weight:800;}
 
+/* Screenshot Frames */
+.screenshot-frame{background:#fff;border:2px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow);margin-top:32px;}
+.screenshot-frame img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line-2);}
+.screenshot-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
+
 /* ===== CLEANUP GRID ===== */
 .cleanup-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
 .cleanup-card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:24px 20px;transition:transform .2s,box-shadow .2s;}
@@ -261,6 +266,7 @@ ul{list-style:none;}
   .cleanup-grid{grid-template-columns:repeat(2,1fr);}
   .info-grid{grid-template-columns:repeat(2, 1fr);}
   .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
+  .screenshot-grid{grid-template-columns:1fr;}
 }
 @media (max-width:820px){
   .nav-links,.nav-cta .btn-ghost{display:none;}
@@ -278,7 +284,7 @@ ul{list-style:none;}
 }
 @media (max-width:540px){
   .section{padding:60px 0;}
-  .cat-grid,.tabs-grid,.feat-grid,.cleanup-grid,.sec-grid,.info-grid{grid-template-columns:1fr;}
+  .cat-grid,.tabs-grid,.feat-grid,.cleanup-grid,.sec-grid,.info-grid,.screenshot-grid{grid-template-columns:1fr;}
   .wrap{padding:0 18px;}
   .footer-top{grid-template-columns:1fr;}
   .cta-band,.privacy{padding:44px 24px;}
@@ -330,7 +336,7 @@ ul{list-style:none;}
         <div class="hero-visual">
             <div class="hero-card">
                 <div class="bar"><i class="dr"></i><i class="dy"></i><i class="dg"></i><span class="ttl">پیشخوان هوشمند وردبان</span></div>
-                <img src="https://uploadkon.ir/uploads/dfa323_26تصویر-اصلی-افزونه-پیشخوان.png" alt="پیشخوان افزونه وردبان">
+                <img src="https://uploadkon.ir/uploads/b48801_26تصویر-پیشخوان.png" alt="پیشخوان افزونه وردبان">
             </div>
         </div>
     </div>
@@ -383,6 +389,15 @@ ul{list-style:none;}
                     <input type="text" placeholder="سوال خود را از دستیار هوشمند بپرسید..." disabled>
                     <button>ارسال</button>
                 </div>
+            </div>
+        </div>
+        <!-- Added AI Screenshots -->
+        <div class="screenshot-grid">
+            <div class="screenshot-frame">
+                <img src="https://uploadkon.ir/uploads/9ba101_26Screenshot-2026-08-01-153620.png" alt="صفحه چت با هوش مصنوعی وردبان">
+            </div>
+            <div class="screenshot-frame">
+                <img src="https://uploadkon.ir/uploads/35ef01_26Screenshot-2026-08-01-154047.png" alt="صفحه تنظیمات هوش مصنوعی وردبان">
             </div>
         </div>
     </div>
@@ -457,6 +472,10 @@ ul{list-style:none;}
                 <p>حذف کاربرانی که بیش از ۶ ماه وارد سایت نشده‌اند (مدیران مستثنی هستند و نوشته‌ها به ادمین اصلی منتقل می‌شود).</p>
             </div>
         </div>
+        <!-- Added Cleanup Screenshot -->
+        <div class="screenshot-frame" style="max-width: 900px; margin: 40px auto 0;">
+            <img src="https://uploadkon.ir/uploads/081c01_26Screenshot-2026-08-01-153158.png" alt="صفحه پاکسازی وردبان">
+        </div>
     </div>
 </section>
 
@@ -496,6 +515,15 @@ ul{list-style:none;}
                     <h3>ثبت فعالیت ادمین‌ها</h3>
                     <p>ثبت خودکار ورود و خروج مدیران سایت. محاسبه دقیق مدت زمان فعالیت هر کاربر بر اساس آخرین زمان ورود و خروج برای نظارت کامل.</p>
                 </div>
+            </div>
+        </div>
+        <!-- Added Security Screenshots -->
+        <div class="screenshot-grid">
+            <div class="screenshot-frame">
+                <img src="https://uploadkon.ir/uploads/9ba101_26Screenshot-2026-08-01-153648.png" alt="صفحه فعالسازی احراز هویت دو مرحله‌ای">
+            </div>
+            <div class="screenshot-frame">
+                <img src="https://uploadkon.ir/uploads/d9ce01_26Screenshot-2026-08-01-153632.png" alt="صفحه تغییر لینک صفحه ادمین">
             </div>
         </div>
     </div>
@@ -736,6 +764,10 @@ ul{list-style:none;}
                 <p class="info-desc">این قسمت وضعیت مهم‌ترین تنظیمات امنیتی سایت مانند فعال بودن SSL، وجود فایل پیکربندی وردپرس، تعداد مدیران سایت و بررسی وجود یا عدم وجود نام کاربری پیشفرض را نمایش می‌دهد.</p>
             </div>
         </div>
+        <!-- Added WP Info Screenshot -->
+        <div class="screenshot-frame" style="max-width: 900px; margin: 40px auto 0;">
+            <img src="https://uploadkon.ir/uploads/9ba101_26Screenshot-2026-08-01-153223.png" alt="صفحه اطلاعات وردپرس">
+        </div>
     </div>
 </section>
 
@@ -774,6 +806,26 @@ ul{list-style:none;}
             </div>
             <span class="tag">۱۰۰٪ محلی و امن</span>
         </div>
+    </div>
+</section>
+
+<!-- ===== NEW: RESPONSIVE & GALLERY SECTION ===== -->
+<section class="section soft" id="gallery">
+    <div class="wrap">
+        <div class="sec-head">
+            <span class="pill"><span class="dot"></span>تجربه کاربری بی‌نقص</span>
+            <h2>کاملاً <span class="grad">ریسپانسیو</span> و سازگار با موبایل و تبلت</h2>
+            <p>افزونه وردبان به‌گونه‌ای طراحی شده که در گوشی موبایل و تبلت نیز به‌راحتی و بدون نقص اجرا می‌شود. این یعنی شما می‌توانید در هر شرایطی و از هر دستگاهی، سلامت سایت خود را بررسی و مدیریت کنید.</p>
+        </div>
+        <div class="screenshot-grid">
+            <div class="screenshot-frame">
+                <img src="https://uploadkon.ir/uploads/1b5601_26Screenshot-2026-08-01-153209.png" alt="صفحه اسکن افزونه‌ها">
+            </div>
+            <div class="screenshot-frame">
+                <img src="https://uploadkon.ir/uploads/9ea001_26Screenshot-2026-08-01-154129.png" alt="صفحه مدیریت منوها">
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 24px; color: var(--muted); font-weight: 600;">و ... برگه‌های دیگر در داخل افزونه پس از خرید قابل مشاهده است.</p>
     </div>
 </section>
 
